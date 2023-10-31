@@ -124,6 +124,9 @@ let name = game.askForString("What is your name?")
 game.splash("Hello " + name + "!")
 game.splash("Would you like to know your future?")
 game.splash("Of course you would, who wouldn't")
-if (false || false) {
+let answer1 = game.askForString("dog or cat")
+if (answer1 == "dog") {
+	
+} else {
 	
 }
