@@ -1,3 +1,5 @@
+let fortune2 = false
+let fortune_1 = false
 scene.setBackgroundImage(img`
     eeeee2222222222222222222222222222222222ee2222ee2222ee2222222eeeee2222222222222222222222222222222222ee22222eeee222ee2eeeee2222222222222222222222222222222222ee222
     222eeeee22222222222222222222222222222eee2222eeee2222ee222222222eeeee22222222222222222222222222222eee2222eeeee222ee22222eeeee22222222222222222222222222222eee2222
@@ -125,8 +127,19 @@ game.splash("Hello " + name + "!")
 game.splash("Would you like to know your future?")
 game.splash("Of course you would, who wouldn't")
 let answer1 = game.askForString("dog or cat")
-if (answer1 == "dog") {
-	
+let answer2 = game.askForString("light or dark")
+let answer3 = game.askForString("forest or sea")
+if (answer3 == "forest") {
+    fortune_1 = true
+    fortune2 = false
 } else {
-	
+    fortune2 = true
+    fortune_1 = false
 }
+if (fortune_1 == true) {
+    game.splash("You will discover a great treasure...")
+} else {
+    game.splash("I sense a dark presence.......")
+}
+pause(100)
+game.reset()
